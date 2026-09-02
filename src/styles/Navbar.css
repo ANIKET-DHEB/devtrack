@@ -57,12 +57,17 @@
 
   font-size: 18px;
   font-weight: 700;
+
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.18);
 }
 
 .navbar-logo h2 {
   font-size: 20px;
   font-weight: 700;
+
   color: #111827;
+
+  letter-spacing: -0.3px;
 
   transition: color 0.3s ease;
 }
@@ -74,7 +79,7 @@
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
 }
 
 /* ================================
@@ -127,14 +132,20 @@
   display: flex;
   align-items: center;
 
-  border: none;
+  border: 1px solid #e5e7eb;
   border-radius: 20px;
 
-  background: #e5e7eb;
+  background: #f3f4f6;
 
   cursor: pointer;
 
-  transition: background 0.3s ease;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  border-color: #d1d5db;
 }
 
 .theme-toggle-icon {
@@ -165,25 +176,35 @@
 ================================ */
 
 .theme-toggle.dark {
-  background: #374151;
+  background: #111827;
+  border-color: #374151;
 }
 
 .theme-toggle.dark .theme-toggle-icon {
   transform: translateX(26px);
 
-  background: #111827;
+  background: #1f2937;
   color: #facc15;
 }
 
 /* ================================
-   Profile
+   Profile Divider
 ================================ */
 
 .navbar-profile {
   display: flex;
   align-items: center;
+
   gap: 10px;
+
+  padding-left: 16px;
+
+  border-left: 1px solid #e5e7eb;
 }
+
+/* ================================
+   Profile Avatar
+================================ */
 
 .profile-avatar {
   width: 38px;
@@ -206,15 +227,23 @@
     color 0.3s ease;
 }
 
+/* ================================
+   Profile Info
+================================ */
+
 .profile-info {
   display: flex;
   flex-direction: column;
+
   gap: 2px;
+
+  min-width: 85px;
 }
 
 .profile-info strong {
   font-size: 14px;
   font-weight: 600;
+
   color: #111827;
 
   transition: color 0.3s ease;
@@ -222,6 +251,7 @@
 
 .profile-info span {
   font-size: 12px;
+
   color: #6b7280;
 
   transition: color 0.3s ease;
@@ -249,6 +279,23 @@ body.dark .menu-button {
 body.dark .menu-button:hover {
   background: #374151;
   color: #ffffff;
+}
+
+body.dark .theme-toggle {
+  background: #111827;
+  border-color: #374151;
+}
+
+body.dark .theme-toggle:hover {
+  border-color: #4b5563;
+}
+
+body.dark .theme-toggle-icon {
+  background: #1f2937;
+}
+
+body.dark .navbar-profile {
+  border-left-color: #374151;
 }
 
 body.dark .profile-avatar {
@@ -285,6 +332,7 @@ body.dark .profile-info span {
   .navbar-logo span {
     width: 34px;
     height: 34px;
+
     font-size: 16px;
   }
 
@@ -305,6 +353,10 @@ body.dark .profile-info span {
   .theme-toggle.dark .theme-toggle-icon {
     transform: translateX(24px);
   }
+
+  .navbar-profile {
+    padding-left: 12px;
+  }
 }
 
 /* ================================
@@ -314,6 +366,11 @@ body.dark .profile-info span {
 @media (max-width: 480px) {
   .navbar {
     padding: 0 14px;
+  }
+
+  .navbar-profile {
+    padding-left: 0;
+    border-left: none;
   }
 
   .navbar-profile .profile-info {
@@ -342,6 +399,7 @@ body.dark .profile-info span {
   .theme-toggle-icon {
     width: 23px;
     height: 23px;
+
     font-size: 12px;
   }
 
