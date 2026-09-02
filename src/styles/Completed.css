@@ -1,0 +1,133 @@
+/* ================================
+   Completed Page
+================================ */
+
+.completed-page {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.completed-page > h1 {
+  font-size: 32px;
+  font-weight: 700;
+
+  color: #111827;
+
+  transition: color 0.3s ease;
+}
+
+.completed-page > p {
+  margin-top: 8px;
+
+  font-size: 15px;
+
+  color: #6b7280;
+
+  transition: color 0.3s ease;
+}
+
+/* ================================
+   Completed List
+================================ */
+
+.completed-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+  margin-top: 35px;
+}
+
+/* ================================
+   Empty State
+================================ */
+
+.no-completed-tasks {
+  padding: 40px 20px;
+
+  text-align: center;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.no-completed-tasks h3 {
+  font-size: 16px;
+  color: #111827;
+
+  transition: color 0.3s ease;
+}
+
+.no-completed-tasks p {
+  margin-top: 6px;
+
+  font-size: 14px;
+  color: #6b7280;
+
+  transition: color 0.3s ease;
+}
+
+/* ================================
+   Dark Mode
+================================ */
+
+body.dark .completed-page > h1 {
+  color: #f9fafb;
+}
+
+body.dark .completed-page > p {
+  color: #9ca3af;
+}
+
+body.dark .no-completed-tasks {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+body.dark .no-completed-tasks h3 {
+  color: #f9fafb;
+}
+
+body.dark .no-completed-tasks p {
+  color: #9ca3af;
+}
+
+/* ================================
+   Mobile
+================================ */
+
+@media (max-width: 768px) {
+  .completed-page {
+    padding: 30px 18px;
+  }
+
+  .completed-page > h1 {
+    font-size: 28px;
+  }
+
+  .completed-list {
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .completed-page {
+    padding: 24px 14px;
+  }
+
+  .completed-page > h1 {
+    font-size: 24px;
+  }
+
+  .completed-page > p {
+    font-size: 14px;
+  }
+}

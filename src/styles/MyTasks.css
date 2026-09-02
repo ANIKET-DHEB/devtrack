@@ -1,0 +1,82 @@
+/* ================================
+   My Tasks
+================================ */
+
+.my-tasks {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.my-tasks > h1 {
+  font-size: 32px;
+  font-weight: 700;
+
+  color: #111827;
+
+  transition: color 0.3s ease;
+}
+
+.my-tasks > p {
+  margin-top: 8px;
+
+  font-size: 15px;
+
+  color: #6b7280;
+
+  transition: color 0.3s ease;
+}
+
+.my-tasks-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+  margin-top: 35px;
+}
+
+/* ================================
+   Dark Mode
+================================ */
+
+body.dark .my-tasks > h1 {
+  color: #f9fafb;
+}
+
+body.dark .my-tasks > p {
+  color: #9ca3af;
+}
+
+/* ================================
+   Mobile
+================================ */
+
+@media (max-width: 768px) {
+  .my-tasks {
+    padding: 30px 18px;
+  }
+
+  .my-tasks > h1 {
+    font-size: 28px;
+  }
+
+  .my-tasks-list {
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-tasks {
+    padding: 24px 14px;
+  }
+
+  .my-tasks > h1 {
+    font-size: 24px;
+  }
+
+  .my-tasks > p {
+    font-size: 14px;
+  }
+}

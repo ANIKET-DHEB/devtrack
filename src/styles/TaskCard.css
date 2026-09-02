@@ -1,0 +1,480 @@
+/* ================================
+   Task Card
+================================ */
+
+.task-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* ================================
+   Task Information
+================================ */
+
+.task-info {
+  min-width: 0;
+}
+
+.task-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  transition: color 0.3s ease;
+}
+
+.task-info p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #6b7280;
+  transition: color 0.3s ease;
+}
+
+/* ================================
+   Due Date
+================================ */
+
+.task-due-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+  margin-top: 8px;
+  padding: 6px 10px;
+  border-radius: 7px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.task-due-date svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+/* ================================
+   Status
+================================ */
+
+.task-status {
+  flex-shrink: 0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* In Progress */
+
+.task-status.in-progress {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+/* Pending */
+
+.task-status.pending {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+/* Completed */
+
+.task-status.completed {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+/* ================================
+   Task Actions
+================================ */
+
+.task-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ================================
+   Complete Button
+================================ */
+
+.complete-task {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  background: #f0fdf4;
+  color: #16a34a;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.complete-task:hover {
+  background: #dcfce7;
+  border-color: #86efac;
+  color: #15803d;
+  transform: translateY(-1px);
+}
+
+.complete-task:active {
+  transform: translateY(0);
+}
+
+.complete-task svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* ================================
+   Edit Button
+================================ */
+
+.edit-task {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-task:hover {
+  background: #dbeafe;
+  border-color: #93c5fd;
+  color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.edit-task:active {
+  transform: translateY(0);
+}
+
+.edit-task svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* ================================
+   Delete Button
+================================ */
+
+.delete-task {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fff5f5;
+  color: #ef4444;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-task:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #dc2626;
+  transform: translateY(-1px);
+}
+
+.delete-task:active {
+  transform: translateY(0);
+}
+
+.delete-task svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ================================
+   Dark Mode
+================================ */
+
+body.dark .task-card {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+body.dark .task-card h3 {
+  color: #f9fafb;
+}
+
+body.dark .task-card p {
+  color: #9ca3af;
+}
+
+/* Dark Due Date */
+
+body.dark .task-due-date {
+  background: #172554;
+  color: #60a5fa;
+}
+
+/* Dark Status */
+
+body.dark .task-status.in-progress {
+  background: #1e3a8a;
+  color: #bfdbfe;
+}
+
+body.dark .task-status.pending {
+  background: #431407;
+  color: #fed7aa;
+}
+
+body.dark .task-status.completed {
+  background: #064e3b;
+  color: #a7f3d0;
+}
+
+/* Dark Complete Button */
+
+body.dark .complete-task {
+  background: #052e16;
+  border-color: #166534;
+  color: #4ade80;
+}
+
+body.dark .complete-task:hover {
+  background: #14532d;
+  border-color: #22c55e;
+  color: #86efac;
+}
+
+/* Dark Edit Button */
+
+body.dark .edit-task {
+  background: #172554;
+  border-color: #1e40af;
+  color: #93c5fd;
+}
+
+body.dark .edit-task:hover {
+  background: #1e3a8a;
+  border-color: #3b82f6;
+  color: #bfdbfe;
+}
+
+/* Dark Delete Button */
+
+body.dark .delete-task {
+  background: #450a0a;
+  border-color: #991b1b;
+  color: #f87171;
+}
+
+body.dark .delete-task:hover {
+  background: #7f1d1d;
+  border-color: #ef4444;
+  color: #fca5a5;
+}
+
+/* ================================
+   Task Card - Mobile
+================================ */
+
+.task-card {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+  padding: 16px;
+}
+
+/* Task Information */
+
+.task-info {
+  width: 100%;
+}
+
+.task-card h3 {
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.task-card p {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+/* Due Date */
+
+.task-due-date {
+  margin-top: 9px;
+  font-size: 11px;
+  padding: 6px 9px;
+}
+
+/* Task Actions */
+
+.task-actions {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Priority */
+
+.task-priority {
+  font-size: 11px;
+  padding: 5px 9px;
+}
+
+/* Status */
+
+.task-status {
+  font-size: 11px;
+  padding: 5px 9px;
+}
+
+/* Action Buttons */
+
+.complete-task,
+.edit-task,
+.delete-task {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+}
+
+.complete-task svg,
+.edit-task svg,
+.delete-task svg {
+  width: 12px;
+  height: 12px;
+}
+/* ================================
+   Small Mobile
+================================ */
+
+@media (max-width: 360px) {
+  .task-card {
+    flex-direction: column;
+  }
+
+  .task-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .task-status {
+    align-self: flex-start;
+  }
+}
+
+/* =========================
+   Priority Badge
+========================= */
+
+.task-priority {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* High Priority */
+
+.priority-high {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* Medium Priority */
+
+.priority-medium {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+/* Low Priority */
+
+.priority-low {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+/* =========================
+   Dark Mode
+========================= */
+
+body.dark .priority-high {
+  background: #451a1a;
+  color: #f87171;
+}
+
+body.dark .priority-medium {
+  background: #451a03;
+  color: #fbbf24;
+}
+
+body.dark .priority-low {
+  background: #052e16;
+  color: #4ade80;
+}
+
+/* =========================
+   Overdue
+========================= */
+
+.task-status.overdue {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.task-due-date.due-date-overdue {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+body.dark .task-status.overdue {
+  background: #450a0a;
+  color: #f87171;
+}
+
+body.dark .task-due-date.due-date-overdue {
+  background: #450a0a;
+  color: #f87171;
+}

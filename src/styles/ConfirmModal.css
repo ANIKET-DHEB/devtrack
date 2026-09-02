@@ -1,0 +1,261 @@
+/* ================================
+   Confirm Modal Overlay
+================================ */
+
+.confirm-modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(17, 24, 39, 0.45);
+
+  z-index: 1500;
+}
+
+/* ================================
+   Confirm Modal
+================================ */
+
+.confirm-modal {
+  width: 100%;
+  max-width: 400px;
+
+  padding: 28px;
+
+  text-align: center;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+
+  animation: confirm-modal-show 0.2s ease;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* ================================
+   Warning Icon
+================================ */
+
+.confirm-modal-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 16px;
+
+  border-radius: 50%;
+
+  background: #fee2e2;
+  color: #dc2626;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* ================================
+   Content
+================================ */
+
+.confirm-modal h2 {
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.confirm-modal p {
+  margin-top: 8px;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: #6b7280;
+}
+
+/* ================================
+   Actions
+================================ */
+
+.confirm-modal-actions {
+  display: flex;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 24px;
+}
+
+.confirm-modal-actions button {
+  min-width: 100px;
+
+  padding: 10px 18px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* ================================
+   Cancel Button
+================================ */
+
+.confirm-cancel-button {
+  border: 1px solid #d1d5db;
+
+  background: #ffffff;
+  color: #374151;
+}
+
+.confirm-cancel-button:hover {
+  background: #f3f4f6;
+
+  transform: translateY(-1px);
+}
+
+/* ================================
+   Delete Button
+================================ */
+
+.confirm-delete-button {
+  border: 1px solid #dc2626;
+
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.confirm-delete-button:hover {
+  background: #b91c1c;
+  border-color: #b91c1c;
+
+  transform: translateY(-1px);
+}
+
+.confirm-modal-actions button:active {
+  transform: translateY(0);
+}
+
+/* ================================
+   Dark Mode
+================================ */
+
+body.dark .confirm-modal-overlay {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+body.dark .confirm-modal {
+  background: #1f2937;
+  border-color: #374151;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+body.dark .confirm-modal-icon {
+  background: #450a0a;
+  color: #f87171;
+}
+
+body.dark .confirm-modal h2 {
+  color: #f9fafb;
+}
+
+body.dark .confirm-modal p {
+  color: #9ca3af;
+}
+
+/* Dark Cancel */
+
+body.dark .confirm-cancel-button {
+  background: #1f2937;
+  border-color: #4b5563;
+  color: #d1d5db;
+}
+
+body.dark .confirm-cancel-button:hover {
+  background: #374151;
+  border-color: #6b7280;
+  color: #ffffff;
+}
+
+/* Dark Delete */
+
+body.dark .confirm-delete-button {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: #ffffff;
+}
+
+body.dark .confirm-delete-button:hover {
+  background: #b91c1c;
+  border-color: #b91c1c;
+}
+
+/* ================================
+   Animation
+================================ */
+
+@keyframes confirm-modal-show {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ================================
+   Mobile
+================================ */
+
+@media (max-width: 480px) {
+  .confirm-modal-overlay {
+    padding: 14px;
+  }
+
+  .confirm-modal {
+    padding: 24px 18px;
+    border-radius: 14px;
+  }
+
+  .confirm-modal h2 {
+    font-size: 19px;
+  }
+
+  .confirm-modal p {
+    font-size: 13px;
+  }
+
+  .confirm-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .confirm-modal-actions button {
+    width: 100%;
+  }
+}

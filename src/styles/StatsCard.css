@@ -1,0 +1,87 @@
+/* ================================
+   Stats Card
+================================ */
+
+.stat-card {
+  padding: 24px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ================================
+   Content
+================================ */
+
+.stat-card h3 {
+  margin-bottom: 12px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #6b7280;
+
+  transition: color 0.3s ease;
+}
+
+.stat-card strong {
+  font-size: 30px;
+  font-weight: 700;
+
+  color: #111827;
+
+  transition: color 0.3s ease;
+}
+
+/* ================================
+   Dark Mode
+================================ */
+
+body.dark .stat-card {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+body.dark .stat-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+body.dark .stat-card h3 {
+  color: #9ca3af;
+}
+
+body.dark .stat-card strong {
+  color: #f9fafb;
+}
+
+/* ================================
+   Mobile
+================================ */
+
+@media (max-width: 768px) {
+  .stat-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-card {
+    padding: 18px;
+  }
+
+  .stat-card strong {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,76 @@
+/* ================================
+   Global Reset
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================================
+   Body
+================================ */
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #111827;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+/* ================================
+   Dark Mode
+================================ */
+
+body.dark {
+  background: #111827;
+  color: #f9fafb;
+}
+
+/* ================================
+   Buttons
+================================ */
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ================================
+   App Layout
+================================ */
+
+.app-layout {
+  display: flex;
+  min-height: calc(100vh - 70px);
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ================================
+   Dark Mode Scrollbar
+================================ */
+
+body.dark::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.dark::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+body.dark::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 10px;
+}
+
+body.dark::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}
